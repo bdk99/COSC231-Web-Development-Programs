@@ -1,0 +1,50 @@
+<!--Project 5A. Determine amount of change given By Brendan Klein on 10/4/2020-->
+<!--Change Calculator-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Change Calculator!</title>
+	<script>
+			function update()
+			{
+				var change = document.getElementById("change").value;
+
+				var qholder = change%25;  // Q Holder holds 24 here
+				var quarters = (change - qholder)/25;  // Quarter Holds 3 here
+
+				var dholder = qholder%10;    //Dholder holds 4 here
+				var dimes = (qholder - dholder)/10;  //dimes holds 2 here
+
+				var nholder = dholder%5;  //nholder holds 4 here
+				var nickels = (dholder - nholder)/5;  //nickel holds 0 here
+
+				var pennies = (nholder)/1;
+
+				document.getElementById("title").innerHTML = "Change Back...";
+				document.getElementById("quarters").innerHTML = "\xa0\xa0\xa0\xa0Quarters: "+quarters;
+				document.getElementById("dimes").innerHTML = "\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0Dimes: "+dimes;
+				document.getElementById("nickels").innerHTML = "\xa0\xa0\xa0\xa0\xa0\xa0\xa0Nickels: "+nickels;
+				document.getElementById("pennies").innerHTML = "\xa0\xa0\xa0\xa0\xa0\xa0Pennies: "+pennies;
+
+				document.getElementById("new").innerHTML = "This program allows for new computations by entering a new number!";
+
+
+			}
+	</script>
+</head>
+<body>
+	<h1>Change Calculator by Brendan Klein</h1>
+	<p>Enter the amount of change the customer is to get back and I will tell you the number of quarters, dimes, nickels, and pennies they are to get back.</p>
+	<br>
+	<br>
+	<p>Enter the amount of cash back: <input id="change" type="number" onchange="update()"></p>
+	<h2 id="title"></h2>
+	<h2 id="quarters"></h2>
+	<h2 id="dimes"></h2>
+	<h2 id="nickels"></h2>
+	<h2 id="pennies"></h2>
+	<br>
+	<h2 id="new"></h2>
+</body>
+</html>

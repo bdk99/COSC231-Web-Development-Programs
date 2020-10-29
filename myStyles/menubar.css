@@ -1,0 +1,232 @@
+/*Developed by Brendan Klein on 9/27/2020*/
+
+
+
+/*Styles for top navigation bar start here */
+body
+{
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-top:30px;
+}
+             
+.topnav 
+{
+	overflow: hidden;
+	background-color: #333;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.topnavright
+{
+	float: right;
+}
+
+.topnav a 
+{
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover 
+{
+	background-color: #ddd;
+	color: black;
+}
+
+.topnav a.active 
+{
+  	background-color: orange;
+	color: white;
+}
+
+/*Styles for top navigation bar END here*/
+
+/*Styles for cosc231/index.html start here*/
+
+hr.main
+{
+  	background-color:#93A7D4;
+  	height:5mm;
+}
+
+img.main
+{
+  	width:10%;
+  	padding-top:4px;
+  	padding-bottom:5px;
+  	padding-right:400px;
+  	float:right;
+}
+
+h1.main
+{
+	color:#284FF2;
+	text-align:center;
+	font-family:'Times New Roman', Times, serif;
+	font-size:2em;
+	padding-left:250px;
+	padding-top:100px;
+}
+
+h2.main
+{
+	color:#007e00;
+	text-align:center;
+	font-family:'Times New Roman', Times, serif;
+	font-size:2em;
+	padding-left:250px;
+}
+
+li.linktext
+{
+  	color:#007e00
+}
+
+/*Styles for cosc231/index.html END here*/
+
+
+/*Styles for P4 Main Body below*/
+body.table
+{
+	background-color:#116e29;
+	color:white;
+}
+
+table.bodytable
+{
+	border-collapse: collapse;
+	width: 95%;
+	margin:auto;
+	padding: 25px;
+	border: 3px solid black;
+}
+
+td.generic
+{
+	border: 3px solid black;
+	padding:15px;
+}
+
+p.text
+{
+	font-family:'Times New Roman', Times, serif;
+	font-size:18px;
+	padding:10px;
+} 
+
+ul.list
+{
+	font-family:'Times New Roman', Times, serif;
+	font-size:18px;
+}
+
+li.body
+{
+	padding-bottom:20px;
+}
+
+a.link:link
+{
+	color:orange;
+}
+
+a.link:visited
+{
+	color:orange;
+}
+
+/*SECTION FOR SUBHEADERS (BACKGROUND, INTERESTS & HOBBIES, GOALS & DREAMS) */
+p.header
+{
+	font-size:1.5em;
+	font-weight:bolder;
+	color:orange;
+}
+
+.shbackground
+{
+	padding-bottom: 5px;
+	padding-left:70px;
+	width:33%;
+	font-size:25px;
+	font-family:'Times New Roman', Times, serif;
+	border: 3px solid black;
+}
+
+.shIandH
+{
+	padding-bottom: 5px;
+	padding-left:120px;
+	width:33%;
+	font-size:25px;
+	font-family:'Times New Roman', Times, serif;
+	border: 3px solid black;
+}
+
+.shGandD
+{
+	padding-bottom: 5px;
+	padding-left:150px;
+	width:33%;
+	font-size:25px;
+	font-family:'Times New Roman', Times, serif;
+	border: 3px solid black;
+}
+
+/*SECTION FOR SUBHEADERS (BACKGROUND, INTERESTS & HOBBIES, GOALS & DREAMS) */
+                                                                                                                                                                            
+
+/*SECTION FOR MAIN HEADER TABLE for project 4*/
+table.header
+{
+	margin: auto;
+	margin-bottom:30px;
+	border-collapse: collapse;
+	width: 95%;
+	color:#007e00;
+	font-style: italic;
+	border: 3px solid black;
+	padding:15px;
+}
+
+td.htitle
+{
+	width: 66%;
+	border: 3px solid black;
+}
+
+img.himage
+{
+	font-style: italic;
+	border-collapse: collapse;
+	width:20%;
+	padding-right:40%;
+	float:right;
+}
+
+p.name
+{
+	font-size:60px;
+	padding-left:20%;
+	font-weight:bolder;
+	color:orange;
+	font-style: italic;
+}
+
+p.about
+{
+	font-size:60px;
+	padding-left:27%;
+	font-weight:bolder;
+	color:orange;
+	font-style: italic;
+}
+
+/*SECTION FOR MAIN HEADER TABLE FOR Project 4*/

@@ -1,0 +1,95 @@
+<!--  
+Developed by Brendan Klein on 9/2/2020
+--> 
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--The head sets up the information for the webpage including the title and the character set used-->
+<head>
+  <meta charset="UTF-8">
+  <title>Brendan Kleins webpage</title>
+  <link rel="stylesheet" type="text/css" href="myStyles/menubar.css">
+</head>
+
+<!--
+  Opens the body of the website and sets the background color to orange
+  Everything in the body is the body of the webpage to be displayed.
+--> 
+<body style="background-color:#116e29;padding-top:30px">
+
+  <div class="topnav">
+    <a class="active" href="../bklein5">Home</a>
+    <a href="../bklein5/cosc231">Cosc 231</a>
+        <a href="../bklein5/cosc231">Project 1</a>
+        <a href="../bklein5/cosc231/introduction.html">Project 2</a>
+        <a href="../bklein5/cosc231/AboutMeTables.html">Project 3</a>
+        <a href="../bklein5/cosc231/P4NavBar.html">Project 4</a>
+        <a href="../bklein5/cosc231/GuessMyNumber.html">Project 5.1</a>
+        <a href="../bklein5/cosc231/ChangeCalculator.html">Project 5.2</a>
+        <a href="../bklein5/cosc231/Project6A.html">Project 6A</a>
+        <a href="../bklein5/cosc231/Project6B.html">Project 6B</a>
+    <div class="topnavright">
+      <a href="../bklein5/cosc231/P4NavBar.html">About Me</a>
+    </div>
+  </div>
+
+  <h1 style="text-align:center">Welcome to</h1>
+  <h2 style="text-align:center">Brendan K's webpage</h2>
+  <hr style="border-color:orange;background-color:orange; height:5mm"> 
+  <br>
+
+<!-- Div is used to center the image on the page-->
+  <div style="text-align:center;">
+   <img src="images/me3.jpg" alt="This is a photo of me" style="width:15%">
+  </div>
+
+<!--H3 Header for my favorite links, and my favorite links in an unordered list-->
+  <h3 style="color:orange">My favorite links:</h3> 
+  <ul>
+    <li><a style="color:white" href="http://www.emich.edu/">EMU Website</a></li>
+    <li><a style="color:white" href="http://www.google.com">Google Search</a> </li>
+    <li><a style="color:white" href="http://www.discord.com">Discord</a> </li>
+  </ul>
+ <!--End of Links Unorganized List-->
+
+ <!--H3 Header for my classes, and my classes in an unordered list-->
+  <h3 style="color:orange">My classes for Fall 2020:</h3> 
+  <ul>
+   <li><a style="color:white" href="cosc231/">COSC 231</a></li>
+   <li><a style="color:white" href="https://bannerweb.emich.edu/pls/banner/bwckctlg.p_disp_listcrse?term_in=202110&subj_in=COSC&crse_in=311&schd_in=%25">COSC 311 (External Link to EMU Website)</a> </li>
+   <li><a style="color:white" href="https://bannerweb.emich.edu/pls/banner/bwckctlg.p_disp_listcrse?term_in=202110&subj_in=HIST&crse_in=115&schd_in=%25">HIST 115 (External Link to EMU Website)</a> </li>
+   <li><a style="color:white" href="https://bannerweb.emich.edu/pls/banner/bwckctlg.p_disp_listcrse?term_in=202110&subj_in=MATH&crse_in=120&schd_in=%25">MATH 120 (External Link to EMU Website)</a> </li>
+  </ul>
+ <!--End of Classes Unorganized List-->
+
+<!--Organized List block-->
+  <h6 style="color:orange">Image Source</h6>
+  <ol>
+    <li style="color:white">The image above is sourced by me!  I took the image!</li>
+  </ol>
+<!-- End of Ordered List-->
+
+  <br>
+  <br>
+  <p style="color:white">Last Updated: 9/27/2020</p>
+
+<!--Javascript connected html date display.-->
+  <p style="color:white" id="date"></p>
+<!--JavaScript Chunk for obtaining current date from server begins here-->
+  <script> 
+  var newdate= new Date(); 
+  var yearatload=newdate.getFullYear();   //Gets current year and saves it as yearatload variable
+  var monthatload=newdate.getMonth()+1;   //Gets current month and saves it as monthatload variable
+  var dayatload=newdate.getDate();    //Gets current day of month and saves it as dayatload variable
+  //Retrieves all variables from above and combines them in a way to make it easy to read for the user.
+  //Displays the information it gathers from each variable onto the webpage
+  document.getElementById("date").innerHTML = "Current Date: " + monthatload + "/" + dayatload + "/" + yearatload;
+  </script>
+  <!--JavaScript Chunk for obtaining current date from server ends here-->
+
+
+<!--Close of body and html tags-->
+  <h3 style="text-align:center;color:orange" >Thanks again for visiting!  Please come back soon! :D</h3>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!--Project 5B. Guess My Number Game By Brendan Klein on 10/4/2020-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Guess My number!</title>
+	<script>
+		var numgen = Math.floor((Math.random() * 100)+1);   
+		function update()
+		{
+			var user = document.getElementById("name").value;
+			var guess = document.getElementById("guess").value;
+			var output="";
+			if(user !== "")
+			{
+				if(guess == null || numgen > 100 || numgen < 1)
+				{
+					output = user + ", Something is really fucked up here... Refresh page!";
+				}
+				if(guess < numgen)
+				{
+					output = user + ", Your guess is too low!  Try again!";
+				}
+				if(guess > numgen)
+				{
+					output = user + ", Your guess is too high!  Try again!";
+				}
+
+				// Data Validation Check Located here
+				if(guess > 100 || guess < 1)
+				{
+					output = user + ", Your input is not in range!  Try again!  Valid inputs are 1-100";
+				}
+				//Data Validation Check Located here
+
+				if(guess == numgen)
+				{
+					output = user + ", Your guess is correct!  The correct number was "+numgen+"! Enter a new number to try again!";
+					numgen = Math.floor((Math.random() * 100)+1); 
+				}
+				document.getElementById("outputblurb").innerHTML = output;
+			}
+			else
+			{
+				document.getElementById("outputblurb").innerHTML = "Name field required!  Try again after auto-refresh!";
+
+				alert("Refreshing the page due to invalid input");
+				setTimeout(location.reload.bind(location), 3000);
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2>Guess my Number!</h2>
+	<p>Valid Numbers are 1 through 100</p>
+	<br>
+	<br>
+	<p>Enter your First NAME: <input id="name" type="text"></p>
+	<p>Enter your Guess: <input id="guess" type="number" min="1" max="100" onchange="update()"></p>
+	<h2 id="outputblurb"></h2>
+</body>
+</html>

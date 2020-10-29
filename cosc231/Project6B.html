@@ -1,0 +1,162 @@
+<!--Project 6B By Brendan Klein on 10/4/2020-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Truck!</title>
+	<script>
+  		function calculate()
+  		{
+    		var one = document.getElementById("one").value;
+    		var two = document.getElementById("two").value;
+    		var three = document.getElementById("three").value;
+        var end =0;
+
+   		 	var onemultiplyer = 5.99;
+    		var twomultiplyer = 4.99;
+    		var threemultiplyer = 3.99;
+    		var total = (onemultiplyer*one)+(twomultiplyer*two)+(threemultiplyer*three);
+
+        if(isNaN(one) || isNaN(two) || isNaN(three)) // isNaN function checks to see if a value is a number or not.
+        {
+          if(isNaN(one)==true)
+          {
+            alert("The value you entered for number of Beef Burritos is invalid.\nOnly numerical values are accepted!");
+          }
+          if(isNaN(two)==true)
+          {
+            alert("The value you entered for number of Chicken Quesadilla is invalid.\nOnly numerical values are accepted!");
+          }
+          if(isNaN(three)==true)
+          {
+            alert("The value you entered for number of Salads is invalid.\nOnly numerical values are accepted!");
+          }
+        }
+        //----->INPUT VALIDATION
+        //INPUT VALUES ARE AT LEAST NUMBERS AT THIS POINT
+        else
+        {
+          var parsedone = parseInt(document.getElementById("one").value);
+          var parsedtwo = parseInt(document.getElementById("two").value);
+          var parsedthree = parseInt(document.getElementById("three").value);
+            if(isNaN(parsedone)==true)
+            {
+              parsedone=0;
+              one=0;
+            }
+            if(isNaN(parsedtwo)==true)
+            {
+              parsedtwo=0;
+              two=0;
+            }
+            if(isNaN(parsedthree)==true)
+            {
+              parsedthree=0;
+              three=0;
+            }
+          if((parsedone==0) && (parsedtwo==0) && (parsedthree==0))
+          {
+            alert("You ordered: NOTHING!\nWhy did you come here in the first place if you didn't want to eat?");
+            var end=1;
+          }
+          //x = (Number.isInteger(one) +" "+ Number.isInteger(two) +" "+ Number.isInteger(three) +" "+ end)
+          //document.write(x);
+          if(one%1==0 || two%1==0 || three%1==0)
+          {
+            if(one<=-1 || two<=-1 || three<=-1)
+            {
+              alert("You are not allowed to order negative quantities of food!");
+            }
+            else
+            {
+              alert("You ordered:\n"+one+" x Beef Burrito(s)\n"+two+" x Chicken Quesadilla(s)\n"+three+" x Salad(s)\n"+"Your Total is: $"+Number.parseFloat(total).toFixed(2));
+            }
+            
+          }
+          else
+          {
+            alert("You are not allowed to order decimal quantities of food!");
+          }
+        }
+      }
+  		function reset()
+  		{
+  			document.getElementById("one").style.backgroundColor="white";
+  			document.getElementById("two").style.backgroundColor="white";
+  			document.getElementById("three").style.backgroundColor="white";
+  			document.getElementById("one").value="";
+  			document.getElementById("two").value="";
+  			document.getElementById("three").value="";
+        end=0;
+  		}
+  		function yellow(s)
+  		{
+  			if(s==1)
+  			{
+  				document.getElementById("one").style.backgroundColor="yellow";
+  			}
+  			if(s==2)
+  			{
+  				document.getElementById("two").style.backgroundColor="yellow";
+  			}
+  			if(s==3)
+  			{
+  				document.getElementById("three").style.backgroundColor="yellow";
+  			}
+  		}
+  		function green(j)
+  		{
+  			if(j==1)
+  			{
+  				document.getElementById("one").style.backgroundColor="green";
+  			}
+  			if(j==2)
+  			{
+  				document.getElementById("two").style.backgroundColor="green";
+  			}
+  			if(j==3)
+  			{
+  				document.getElementById("three").style.backgroundColor="green";
+  			}
+  		}
+	</script>
+</head>
+	<body>
+  		<h2>Brendan Klein's Food Truck</h2>
+  		<table>
+        <tr>
+  		    <td>
+            <p>Item</p>
+          </td>
+          <td>
+            <p>Quantity</p>
+          </td>
+        </tr>
+        <tr>
+  		    <td>
+            <p>Beef Burrito ($5.99 each)</p>
+          </td>
+          <td>
+            <input onmouseover="yellow(1)" onchange="green(1)" id="one">
+          </td>
+        </tr>
+        <tr>
+          <td>
+  		      <p>Chicken Quesadilla ($4.99 each)</p>
+          </td>
+          <td>
+            <input onmouseover="yellow(2)" onchange="green(2)" id="two">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Salad ($3.99 each)</p>
+          </td>
+          <td>
+            <input onmouseover="yellow(3)" onchange="green(3)" id="three">
+          </td>
+        </tr>
+      </table>
+  		<button id="calculate" onclick="calculate()">Calculate!</button>
+  		<button onclick="reset()">Reset!</button>
+	</body>
+</html>
