@@ -67,7 +67,7 @@
                     for($j=0; $j<5; $j++)
                     {                 
                         array_push($farray,(($carray[$j])*(9/5))+32);
-                        echo "Given the celsius value: ".$carray[$j].", the fahrenheit value would be: ".round($farray[$j],2)."°<br>";
+                        echo "Given the celsius value: ".$carray[$j].", the converted fahrenheit value would be: ".round($farray[$j],2)."°<br>";
                     }
                 }
                 else
@@ -75,7 +75,7 @@
                     for($j=0; $j<5; $j++)
                     {
                         array_push($carray,(($farray[$j])-32)*(5/9));
-                        echo "Given the fahrenheit value: ".$farray[$j].", the celsius value would be: ".round($carray[$j],2)."°<br>";
+                        echo "Given the fahrenheit value: ".$farray[$j].", the converted celsius value would be: ".round($carray[$j],2)."°<br>";
                     }
                 }
             }
