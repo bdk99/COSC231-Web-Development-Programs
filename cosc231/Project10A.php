@@ -51,7 +51,7 @@
                 {
                     for($j=0; $j<5; $j++)
                     {
-                        echo "Given the value: ".$digit[$j].", the written out number value would be: ".$namesarr[$digit[$j]]."<br>";
+                        echo $digit[$j]." is spelled: ".$namesarr[$digit[$j]]."<br>";
                     }
                 }
             }
